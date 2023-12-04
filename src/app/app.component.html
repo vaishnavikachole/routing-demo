@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      <!-- </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home">Home</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about">About</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="products">Products</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="employees">Employees</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="courses">Courses</a><br>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact">Contact us</a><br>
+          </li>
+          <li class="nav-item">
+             <!--auxilary router outlet, multiple outlets using name attribute -->
+            <a class="nav-link" [routerLink]="[{ outlets: { course_details : ['courseDetails'] } }]">Course Details</a><br>
+          </li> 
+          <li class="nav-item">
+            <!--auxilary router outlet, multiple outlets using name attribute -->
+           <a class="nav-link" [routerLink]="[{ outlets: { course_details2 : ['courseDetails2'] } }]">Course Details2</a><br>
+         </li> 
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- <h2>Angular Routing Demo</h2>
+<a routerLink="home">Home</a><br>
+<a routerLink="contact">Contact</a><br>
+<a routerLink="about">About</a><br>
+<a routerLink="employees">Employees</a><br>
+<a routerLink="products">Products</a>
+<br><br> -->
+<router-outlet></router-outlet>
+<router-outlet name="course_details"></router-outlet>
+<router-outlet name="course_details2"></router-outlet>
